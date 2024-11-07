@@ -1,6 +1,6 @@
 let cartIcon = document.querySelector('#Cart-icon');
 let cart = document.getElementsByClassName('cart')[0]; // Get the first element
-let cartCloseIcon = document.getElementById('close-cart'); // Remove the #
+let cartCloseIcon = document.getElementById('close-cart');
 
 // open cart
 cartIcon.onclick = () => {
@@ -46,7 +46,6 @@ function ready() {
 
     }
 
-    //Add To Cart
     function addCartClicked(e) {
         let button = e.target;
         let shopProduct = button.parentElement;
@@ -92,10 +91,9 @@ function ready() {
         updateTotal(); // Update the total price after adding an item
     }
 
-    // ... (Your existing code) ...
 
     // Buy Button Functionality
-    const buyButton = document.getElementsByClassName('btn-buy')[0]; // Assuming you have a button with class 'btn-buy'
+    const buyButton = document.getElementsByClassName('btn-buy')[0];
     if (buyButton) {
         buyButton.addEventListener('click', () => {
             let cartContent = document.getElementsByClassName('cart-content')[0];
@@ -121,8 +119,8 @@ function ready() {
             console.log("Items to purchase:", cartItems);
             alert('Thank you for your purchase!');
 
-            // Optionally clear the cart after purchase
-            cartContent.innerHTML = ''; 
+            //Clear the cart after purchase
+            cartContent.innerHTML = '';
             updateTotal();
         });
     }
